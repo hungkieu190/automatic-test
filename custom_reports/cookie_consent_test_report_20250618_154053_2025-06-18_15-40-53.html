@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Báo cáo kiểm thử Cookie Consent Plugin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Báo cáo kiểm thử Cookie Consent Plugin</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-06-18 15:40:53</p>
+                <p class='attribute'><strong>Duration: </strong>88.27 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 8, Pass: 2, Fail: 6</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_display.TestCookieConsentDisplay</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_1_1_banner_first_visit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_1_2_banner_mobile_display</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>đã mở trang web thành công
+</p><p style="color:maroon;">AssertionError: Cookie banner không hiển thị đúng trên thiết bị di động: Message: 
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_display.py", line 79, in test_1_2_banner_mobile_display
+    cookie_banner = WebDriverWait(self.driver, 10).until(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_display.py", line 121, in test_1_2_banner_mobile_display
+    self.fail(f"Cookie banner không hiển thị đúng trên thiết bị di động: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Cookie banner không hiển thị đúng trên thiết bị di động: Message: 
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_1_3_banner_return_visit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_1_4_banner_with_cache</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: False is not true : JavaScript của plugin không tải với cache</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_display.py", line 181, in test_1_4_banner_with_cache
+    self.assertTrue(js_loaded, "JavaScript của plugin không tải với cache")
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true : JavaScript của plugin không tải với cache
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 4, Pass: 2, Fail: 2 -- Duration: 39.64 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_consent_functionality.TestCookieConsentFunctionality</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_1_accept_all_cookies</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra nút chấp nhận tất cả: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .accept-all"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56efd6ef345a <unknown>
+#1 0x56efd6998760 <unknown>
+#2 0x56efd69ea127 <unknown>
+#3 0x56efd69ea321 <unknown>
+#4 0x56efd6a38e94 <unknown>
+#5 0x56efd6a0fe7d <unknown>
+#6 0x56efd6a3630b <unknown>
+#7 0x56efd6a0fc23 <unknown>
+#8 0x56efd69dc4a5 <unknown>
+#9 0x56efd69dd111 <unknown>
+#10 0x56efd6eb7f1b <unknown>
+#11 0x56efd6ebbe19 <unknown>
+#12 0x56efd6e9eac9 <unknown>
+#13 0x56efd6ebc9c8 <unknown>
+#14 0x56efd6e8334f <unknown>
+#15 0x56efd6ee0a28 <unknown>
+#16 0x56efd6ee0c06 <unknown>
+#17 0x56efd6ef2336 <unknown>
+#18 0x74bf9cc9caa4 <unknown>
+#19 0x74bf9cd29c3c <unknown>
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 54, in test_2_1_accept_all_cookies
+    accept_button = self.driver.find_element(By.CSS_SELECTOR, "#cookie-banner .accept-all")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 914, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .accept-all"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56efd6ef345a <unknown>
+#1 0x56efd6998760 <unknown>
+#2 0x56efd69ea127 <unknown>
+#3 0x56efd69ea321 <unknown>
+#4 0x56efd6a38e94 <unknown>
+#5 0x56efd6a0fe7d <unknown>
+#6 0x56efd6a3630b <unknown>
+#7 0x56efd6a0fc23 <unknown>
+#8 0x56efd69dc4a5 <unknown>
+#9 0x56efd69dd111 <unknown>
+#10 0x56efd6eb7f1b <unknown>
+#11 0x56efd6ebbe19 <unknown>
+#12 0x56efd6e9eac9 <unknown>
+#13 0x56efd6ebc9c8 <unknown>
+#14 0x56efd6e8334f <unknown>
+#15 0x56efd6ee0a28 <unknown>
+#16 0x56efd6ee0c06 <unknown>
+#17 0x56efd6ef2336 <unknown>
+#18 0x74bf9cc9caa4 <unknown>
+#19 0x74bf9cd29c3c <unknown>
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 83, in test_2_1_accept_all_cookies
+    self.fail(f"Lỗi khi kiểm tra nút chấp nhận tất cả: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra nút chấp nhận tất cả: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .accept-all"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56efd6ef345a <unknown>
+#1 0x56efd6998760 <unknown>
+#2 0x56efd69ea127 <unknown>
+#3 0x56efd69ea321 <unknown>
+#4 0x56efd6a38e94 <unknown>
+#5 0x56efd6a0fe7d <unknown>
+#6 0x56efd6a3630b <unknown>
+#7 0x56efd6a0fc23 <unknown>
+#8 0x56efd69dc4a5 <unknown>
+#9 0x56efd69dd111 <unknown>
+#10 0x56efd6eb7f1b <unknown>
+#11 0x56efd6ebbe19 <unknown>
+#12 0x56efd6e9eac9 <unknown>
+#13 0x56efd6ebc9c8 <unknown>
+#14 0x56efd6e8334f <unknown>
+#15 0x56efd6ee0a28 <unknown>
+#16 0x56efd6ee0c06 <unknown>
+#17 0x56efd6ef2336 <unknown>
+#18 0x74bf9cc9caa4 <unknown>
+#19 0x74bf9cd29c3c <unknown>
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_2_reject_all_cookies</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra nút từ chối tất cả: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .close"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5c26236b945a <unknown>
+#1 0x5c262315e760 <unknown>
+#2 0x5c26231b0127 <unknown>
+#3 0x5c26231b0321 <unknown>
+#4 0x5c26231fee94 <unknown>
+#5 0x5c26231d5e7d <unknown>
+#6 0x5c26231fc30b <unknown>
+#7 0x5c26231d5c23 <unknown>
+#8 0x5c26231a24a5 <unknown>
+#9 0x5c26231a3111 <unknown>
+#10 0x5c262367df1b <unknown>
+#11 0x5c2623681e19 <unknown>
+#12 0x5c2623664ac9 <unknown>
+#13 0x5c26236829c8 <unknown>
+#14 0x5c262364934f <unknown>
+#15 0x5c26236a6a28 <unknown>
+#16 0x5c26236a6c06 <unknown>
+#17 0x5c26236b8336 <unknown>
+#18 0x7adc3ce9caa4 <unknown>
+#19 0x7adc3cf29c3c <unknown>
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 90, in test_2_2_reject_all_cookies
+    reject_button = self.driver.find_element(By.CSS_SELECTOR, "#cookie-banner .reject-all")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 914, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .reject-all"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5c26236b945a <unknown>
+#1 0x5c262315e760 <unknown>
+#2 0x5c26231b0127 <unknown>
+#3 0x5c26231b0321 <unknown>
+#4 0x5c26231fee94 <unknown>
+#5 0x5c26231d5e7d <unknown>
+#6 0x5c26231fc30b <unknown>
+#7 0x5c26231d5c23 <unknown>
+#8 0x5c26231a24a5 <unknown>
+#9 0x5c26231a3111 <unknown>
+#10 0x5c262367df1b <unknown>
+#11 0x5c2623681e19 <unknown>
+#12 0x5c2623664ac9 <unknown>
+#13 0x5c26236829c8 <unknown>
+#14 0x5c262364934f <unknown>
+#15 0x5c26236a6a28 <unknown>
+#16 0x5c26236a6c06 <unknown>
+#17 0x5c26236b8336 <unknown>
+#18 0x7adc3ce9caa4 <unknown>
+#19 0x7adc3cf29c3c <unknown>
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 94, in test_2_2_reject_all_cookies
+    close_button = self.driver.find_element(By.CSS_SELECTOR, "#cookie-banner .close")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 914, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .close"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5c26236b945a <unknown>
+#1 0x5c262315e760 <unknown>
+#2 0x5c26231b0127 <unknown>
+#3 0x5c26231b0321 <unknown>
+#4 0x5c26231fee94 <unknown>
+#5 0x5c26231d5e7d <unknown>
+#6 0x5c26231fc30b <unknown>
+#7 0x5c26231d5c23 <unknown>
+#8 0x5c26231a24a5 <unknown>
+#9 0x5c26231a3111 <unknown>
+#10 0x5c262367df1b <unknown>
+#11 0x5c2623681e19 <unknown>
+#12 0x5c2623664ac9 <unknown>
+#13 0x5c26236829c8 <unknown>
+#14 0x5c262364934f <unknown>
+#15 0x5c26236a6a28 <unknown>
+#16 0x5c26236a6c06 <unknown>
+#17 0x5c26236b8336 <unknown>
+#18 0x7adc3ce9caa4 <unknown>
+#19 0x7adc3cf29c3c <unknown>
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 123, in test_2_2_reject_all_cookies
+    self.fail(f"Lỗi khi kiểm tra nút từ chối tất cả: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra nút từ chối tất cả: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .close"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5c26236b945a <unknown>
+#1 0x5c262315e760 <unknown>
+#2 0x5c26231b0127 <unknown>
+#3 0x5c26231b0321 <unknown>
+#4 0x5c26231fee94 <unknown>
+#5 0x5c26231d5e7d <unknown>
+#6 0x5c26231fc30b <unknown>
+#7 0x5c26231d5c23 <unknown>
+#8 0x5c26231a24a5 <unknown>
+#9 0x5c26231a3111 <unknown>
+#10 0x5c262367df1b <unknown>
+#11 0x5c2623681e19 <unknown>
+#12 0x5c2623664ac9 <unknown>
+#13 0x5c26236829c8 <unknown>
+#14 0x5c262364934f <unknown>
+#15 0x5c26236a6a28 <unknown>
+#16 0x5c26236a6c06 <unknown>
+#17 0x5c26236b8336 <unknown>
+#18 0x7adc3ce9caa4 <unknown>
+#19 0x7adc3cf29c3c <unknown>
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_3_customize_cookie_settings</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra tùy chỉnh cài đặt cookie: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .customize"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56f64e4c845a <unknown>
+#1 0x56f64df6d760 <unknown>
+#2 0x56f64dfbf127 <unknown>
+#3 0x56f64dfbf321 <unknown>
+#4 0x56f64e00de94 <unknown>
+#5 0x56f64dfe4e7d <unknown>
+#6 0x56f64e00b30b <unknown>
+#7 0x56f64dfe4c23 <unknown>
+#8 0x56f64dfb14a5 <unknown>
+#9 0x56f64dfb2111 <unknown>
+#10 0x56f64e48cf1b <unknown>
+#11 0x56f64e490e19 <unknown>
+#12 0x56f64e473ac9 <unknown>
+#13 0x56f64e4919c8 <unknown>
+#14 0x56f64e45834f <unknown>
+#15 0x56f64e4b5a28 <unknown>
+#16 0x56f64e4b5c06 <unknown>
+#17 0x56f64e4c7336 <unknown>
+#18 0x71bf81a9caa4 <unknown>
+#19 0x71bf81b29c3c <unknown>
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 129, in test_2_3_customize_cookie_settings
+    customize_button = self.driver.find_element(By.CSS_SELECTOR, "#cookie-banner .customize")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 914, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .customize"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56f64e4c845a <unknown>
+#1 0x56f64df6d760 <unknown>
+#2 0x56f64dfbf127 <unknown>
+#3 0x56f64dfbf321 <unknown>
+#4 0x56f64e00de94 <unknown>
+#5 0x56f64dfe4e7d <unknown>
+#6 0x56f64e00b30b <unknown>
+#7 0x56f64dfe4c23 <unknown>
+#8 0x56f64dfb14a5 <unknown>
+#9 0x56f64dfb2111 <unknown>
+#10 0x56f64e48cf1b <unknown>
+#11 0x56f64e490e19 <unknown>
+#12 0x56f64e473ac9 <unknown>
+#13 0x56f64e4919c8 <unknown>
+#14 0x56f64e45834f <unknown>
+#15 0x56f64e4b5a28 <unknown>
+#16 0x56f64e4b5c06 <unknown>
+#17 0x56f64e4c7336 <unknown>
+#18 0x71bf81a9caa4 <unknown>
+#19 0x71bf81b29c3c <unknown>
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 188, in test_2_3_customize_cookie_settings
+    self.fail(f"Lỗi khi kiểm tra tùy chỉnh cài đặt cookie: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra tùy chỉnh cài đặt cookie: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#cookie-banner .customize"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x56f64e4c845a <unknown>
+#1 0x56f64df6d760 <unknown>
+#2 0x56f64dfbf127 <unknown>
+#3 0x56f64dfbf321 <unknown>
+#4 0x56f64e00de94 <unknown>
+#5 0x56f64dfe4e7d <unknown>
+#6 0x56f64e00b30b <unknown>
+#7 0x56f64dfe4c23 <unknown>
+#8 0x56f64dfb14a5 <unknown>
+#9 0x56f64dfb2111 <unknown>
+#10 0x56f64e48cf1b <unknown>
+#11 0x56f64e490e19 <unknown>
+#12 0x56f64e473ac9 <unknown>
+#13 0x56f64e4919c8 <unknown>
+#14 0x56f64e45834f <unknown>
+#15 0x56f64e4b5a28 <unknown>
+#16 0x56f64e4b5c06 <unknown>
+#17 0x56f64e4c7336 <unknown>
+#18 0x71bf81a9caa4 <unknown>
+#19 0x71bf81b29c3c <unknown>
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_4_invalid_request_handling</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra xử lý yêu cầu không hợp lệ: Message: javascript error: ajaxurl is not defined
+  (Session info: chrome=137.0.7151.103)
+Stacktrace:
+#0 0x55939ebbb45a <unknown>
+#1 0x55939e660760 <unknown>
+#2 0x55939e6673f8 <unknown>
+#3 0x55939e669f67 <unknown>
+#4 0x55939e6ff2f2 <unknown>
+#5 0x55939e6d7e52 <unknown>
+#6 0x55939e6fe30b <unknown>
+#7 0x55939e6d7c23 <unknown>
+#8 0x55939e6a44a5 <unknown>
+#9 0x55939e6a5111 <unknown>
+#10 0x55939eb7ff1b <unknown>
+#11 0x55939eb83e19 <unknown>
+#12 0x55939eb66ac9 <unknown>
+#13 0x55939eb849c8 <unknown>
+#14 0x55939eb4b34f <unknown>
+#15 0x55939eba8a28 <unknown>
+#16 0x55939eba8c06 <unknown>
+#17 0x55939ebba336 <unknown>
+#18 0x7f3f7f89caa4 <unknown>
+#19 0x7f3f7f929c3c <unknown>
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 197, in test_2_4_invalid_request_handling
+    invalid_request_result = self.driver.execute_script("""
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 544, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.JavascriptException: Message: javascript error: ajaxurl is not defined
+  (Session info: chrome=137.0.7151.103)
+Stacktrace:
+#0 0x55939ebbb45a <unknown>
+#1 0x55939e660760 <unknown>
+#2 0x55939e6673f8 <unknown>
+#3 0x55939e669f67 <unknown>
+#4 0x55939e6ff2f2 <unknown>
+#5 0x55939e6d7e52 <unknown>
+#6 0x55939e6fe30b <unknown>
+#7 0x55939e6d7c23 <unknown>
+#8 0x55939e6a44a5 <unknown>
+#9 0x55939e6a5111 <unknown>
+#10 0x55939eb7ff1b <unknown>
+#11 0x55939eb83e19 <unknown>
+#12 0x55939eb66ac9 <unknown>
+#13 0x55939eb849c8 <unknown>
+#14 0x55939eb4b34f <unknown>
+#15 0x55939eba8a28 <unknown>
+#16 0x55939eba8c06 <unknown>
+#17 0x55939ebba336 <unknown>
+#18 0x7f3f7f89caa4 <unknown>
+#19 0x7f3f7f929c3c <unknown>
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 218, in test_2_4_invalid_request_handling
+    self.fail(f"Lỗi khi kiểm tra xử lý yêu cầu không hợp lệ: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra xử lý yêu cầu không hợp lệ: Message: javascript error: ajaxurl is not defined
+  (Session info: chrome=137.0.7151.103)
+Stacktrace:
+#0 0x55939ebbb45a <unknown>
+#1 0x55939e660760 <unknown>
+#2 0x55939e6673f8 <unknown>
+#3 0x55939e669f67 <unknown>
+#4 0x55939e6ff2f2 <unknown>
+#5 0x55939e6d7e52 <unknown>
+#6 0x55939e6fe30b <unknown>
+#7 0x55939e6d7c23 <unknown>
+#8 0x55939e6a44a5 <unknown>
+#9 0x55939e6a5111 <unknown>
+#10 0x55939eb7ff1b <unknown>
+#11 0x55939eb83e19 <unknown>
+#12 0x55939eb66ac9 <unknown>
+#13 0x55939eb849c8 <unknown>
+#14 0x55939eb4b34f <unknown>
+#15 0x55939eba8a28 <unknown>
+#16 0x55939eba8c06 <unknown>
+#17 0x55939ebba336 <unknown>
+#18 0x7f3f7f89caa4 <unknown>
+#19 0x7f3f7f929c3c <unknown>
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 4, Pass: 0, Fail: 4 -- Duration: 48.62 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

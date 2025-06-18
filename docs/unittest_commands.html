@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Unittest Commands - Cookie Consent Plugin</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #fafbfc; color: #222; margin: 2em; }
+        h1 { color: #2c3e50; }
+        pre { background: #f4f4f4; padding: 1em; border-radius: 6px; border: 1px solid #e1e4e8; font-size: 1em; overflow-x: auto; }
+        .desc { color: #555; margin-bottom: 1em; }
+    </style>
+</head>
+<body>
+    <h1>Python Unittest Commands<br><small>Cookie Consent Plugin</small></h1>
+    <div class="desc">
+        <p>Copy and run any command below to execute a single test case or group of tests for the Cookie Consent Plugin.</p>
+        <p><b>Cú pháp:</b> <code>python -m unittest &lt;tên_file&gt;.&lt;tên_class&gt;.&lt;tên_hàm&gt;</code></p>
+    </div>
+    <pre>
+python -m unittest test_consent_functionality.TestCookieConsentFunctionality.test_2_1_accept_all_cookies
+python -m unittest test_consent_functionality.TestCookieConsentFunctionality.test_2_2_reject_all_cookies
+python -m unittest test_consent_functionality.TestCookieConsentFunctionality.test_2_3_customize_cookie_settings
+python -m unittest test_consent_functionality.TestCookieConsentFunctionality.test_2_4_invalid_request_handling
+
+python -m unittest test_display.TestCookieConsentDisplay.test_1_1_banner_first_visit
+python -m unittest test_display.TestCookieConsentDisplay.test_1_2_banner_mobile_display
+python -m unittest test_display.TestCookieConsentDisplay.test_1_3_banner_return_visit
+python -m unittest test_display.TestCookieConsentDisplay.test_1_4_banner_with_cache
+
+python -m unittest test_cookie_blocking.TestCookieBlocking.test_3_1_block_before_consent
+python -m unittest test_cookie_blocking.TestCookieBlocking.test_3_2_block_after_reject
+python -m unittest test_cookie_blocking.TestCookieBlocking.test_3_3_ad_blockers_compatibility
+
+python -m unittest test_compatibility.TestCompatibility.test_4_1_theme_compatibility
+python -m unittest test_compatibility.TestCompatibility.test_4_2_plugin_compatibility
+python -m unittest test_compatibility.TestCompatibility.test_4_3_browser_compatibility
+
+python -m unittest test_performance.TestPerformance.test_5_1_page_load_time
+
+python -m unittest test_security.TestSecurity.test_6_1_csrf_protection
+python -m unittest test_security.TestSecurity.test_6_2_xss_protection
+python -m unittest test_security.TestSecurity.test_6_3_cookie_security
+
+python -m unittest test_multilingual.TestMultilingual.test_7_1_language_detection
+python -m unittest test_multilingual.TestMultilingual.test_7_2_translation_completeness
+
+python -m unittest test_edge_cases.TestEdgeCases.test_8_1_geo_restriction
+python -m unittest test_edge_cases.TestEdgeCases.test_8_2_cookie_deletion
+python -m unittest test_edge_cases.TestEdgeCases.test_8_3_cookie_expiration
+python -m unittest test_edge_cases.TestEdgeCases.test_8_4_multiple_tabs
+    </pre>
+</body>
+</html>

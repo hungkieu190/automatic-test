@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Testing Framework - Installation and Usage Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .platform {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .note {
+            background-color: #fff8dc;
+            border-left: 4px solid #f1c40f;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #3498db;
+            color: white;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Selenium Testing Framework - Installation and Usage Guide</h1>
+    
+    <p>This guide provides instructions for installing and using the Selenium testing framework for the Washbank Kiosk project on Ubuntu, macOS, and Windows platforms.</p>
+
+    <div class="note">
+        <strong>Note:</strong> This framework uses Python with Selenium WebDriver to automate browser testing for web applications.
+    </div>
+
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation Instructions</a>
+            <ul>
+                <li><a href="#ubuntu">Ubuntu</a></li>
+                <li><a href="#macos">macOS</a></li>
+                <li><a href="#windows">Windows</a></li>
+            </ul>
+        </li>
+        <li><a href="#usage">Usage Guide</a>
+            <ul>
+                <li><a href="#basic-usage">Basic Usage</a></li>
+                <li><a href="#advanced-usage">Advanced Usage</a></li>
+                <li><a href="#common-commands">Common Commands</a></li>
+            </ul>
+        </li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+    </ul>
+
+    <h2 id="prerequisites">Prerequisites</h2>
+    <p>Before installing the testing framework, ensure you have the following prerequisites:</p>
+    <ul>
+        <li>Python 3.8 or higher</li>
+        <li>Pip (Python package installer)</li>
+        <li>Google Chrome or Firefox browser installed</li>
+        <li>Internet connection (for downloading WebDriver)</li>
+    </ul>
+
+    <h2 id="installation">Installation Instructions</h2>
+
+    <div class="tab">
+        <button class="tablinks active" onclick="openPlatform(event, 'Ubuntu')">Ubuntu</button>
+        <button class="tablinks" onclick="openPlatform(event, 'macOS')">macOS</button>
+        <button class="tablinks" onclick="openPlatform(event, 'Windows')">Windows</button>
+    </div>
+
+    <div id="Ubuntu" class="tabcontent" style="display: block;">
+        <h3>Ubuntu Installation</h3>
+        
+        <h4>Step 1: Install Python and pip</h4>
+        <pre>sudo apt update
+sudo apt install python3 python3-pip python3-venv</pre>
+        
+        <h4>Step 2: Create a virtual environment</h4>
+        <pre>mkdir -p ~/devland/automatic-test/thimpress
+cd ~/devland/automatic-test/thimpress
+python3 -m venv .</pre>
+        
+        <h4>Step 3: Activate the virtual environment</h4>
+        <pre>source bin/activate</pre>
+        
+        <h4>Step 4: Install required packages</h4>
+        <pre>pip install selenium webdriver-manager pytest pytest-html</pre>
+        
+        <h4>Step 5: Install Chrome browser (if not already installed)</h4>
+        <pre>sudo apt update
+sudo apt install google-chrome-stable</pre>
+
+        <div class="note">
+            <strong>Note:</strong> The webdriver-manager package will automatically download and manage the appropriate ChromeDriver version for your Chrome browser.
+        </div>
+    </div>
+
+    <div id="macOS" class="tabcontent">
+        <h3>macOS Installation</h3>
+        
+        <h4>Step 1: Install Homebrew (if not already installed)</h4>
+        <pre>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre>
+        
+        <h4>Step 2: Install Python</h4>
+        <pre>brew install python</pre>
+        
+        <h4>Step 3: Create a project directory and virtual environment</h4>
+        <pre>mkdir -p ~/devland/automatic-test/thimpress
+cd ~/devland/automatic-test/thimpress
+python3 -m venv .</pre>
+        
+        <h4>Step 4: Activate the virtual environment</h4>
+        <pre>source bin/activate</pre>
+        
+        <h4>Step 5: Install required packages</h4>
+        <pre>pip install selenium webdriver-manager pytest pytest-html</pre>
+        
+        <h4>Step 6: Install Chrome browser (if not already installed)</h4>
+        <pre>brew install --cask google-chrome</pre>
+
+        <div class="note">
+            <strong>Note:</strong> The webdriver-manager package will automatically download and manage the appropriate ChromeDriver version for your Chrome browser.
+        </div>
+    </div>
+
+    <div id="Windows" class="tabcontent">
+        <h3>Windows Installation</h3>
+        
+        <h4>Step 1: Install Python</h4>
+        <p>Download and install Python from <a href="https://www.python.org/downloads/windows/" target="_blank">python.org</a>. Make sure to check "Add Python to PATH" during installation.</p>
+        
+        <h4>Step 2: Create a project directory and virtual environment</h4>
+        <pre>mkdir C:\devland\automatic-test\thimpress
+cd C:\devland\automatic-test\thimpress
+python -m venv .</pre>
+        
+        <h4>Step 3: Activate the virtual environment</h4>
+        <pre>.\Scripts\activate</pre>
+        
+        <h4>Step 4: Install required packages</h4>
+        <pre>pip install selenium webdriver-manager pytest pytest-html</pre>
+        
+        <h4>Step 5: Install Chrome browser (if not already installed)</h4>
+        <p>Download and install Google Chrome from <a href="https://www.google.com/chrome/" target="_blank">google.com/chrome</a></p>
+
+        <div class="note">
+            <strong>Note:</strong> The webdriver-manager package will automatically download and manage the appropriate ChromeDriver version for your Chrome browser.
+        </div>
+    </div>
+
+    <h2 id="usage">Usage Guide</h2>
+
+    <h3 id="basic-usage">Basic Usage</h3>
+    <p>After installation, you can run the existing test scripts or create your own.</p>
+
+    <h4>Running the Washbank Kiosk Test</h4>
+    <pre>cd ~/devland/automatic-test/thimpress  # Adjust path for Windows if needed
+source bin/activate  # On Windows: .\Scripts\activate
+pytest test_washbank_kiosk.py -v -s</pre>
+
+    <h4>Running the Basic Selenium Test</h4>
+    <pre>python test_selenium.py</pre>
+
+    <h3 id="advanced-usage">Advanced Usage</h3>
+    <p>The testing framework supports various options for running tests:</p>
+
+    <h4>Running Tests with Debug Mode</h4>
+    <pre>pytest test_washbank_kiosk.py -v -s --pdb</pre>
+    <p>The <code>--pdb</code> option will stop at the point of failure for debugging.</p>
+
+    <h4>Generating HTML Reports</h4>
+    <pre>pytest test_washbank_kiosk.py -v --html=report.html</pre>
+    <p>This will generate an HTML report of the test results in the current directory.</p>
+
+    <h4>Running Specific Test Methods</h4>
+    <pre>pytest test_washbank_kiosk.py::TestWashbankKiosk::test_check_dashboard -v</pre>
+
+    <h3 id="common-commands">Common Commands</h3>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>pytest -v</code></td>
+            <td>Run tests with verbose output</td>
+        </tr>
+        <tr>
+            <td><code>pytest -s</code></td>
+            <td>Show print statements during test execution</td>
+        </tr>
+        <tr>
+            <td><code>pytest --pdb</code></td>
+            <td>Enter debugger on test failures</td>
+        </tr>
+        <tr>
+            <td><code>pytest -k "keyword"</code></td>
+            <td>Run tests that match the keyword expression</td>
+        </tr>
+        <tr>
+            <td><code>pytest --html=report.html</code></td>
+            <td>Generate HTML report of test results</td>
+        </tr>
+    </table>
+
+    <h2 id="creating-tests">Creating Your Own Tests</h2>
+    <p>To create your own test scripts, follow this basic structure:</p>
+
+    <pre>
+import pytest
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+
+class TestYourWebsite:
+    @classmethod
+    def setup_class(cls):
+        cls.service = Service(ChromeDriverManager().install())
+        cls.driver = webdriver.Chrome(service=cls.service)
+        cls.driver.implicitly_wait(10)
+        
+    def test_your_feature(self):
+        self.driver.get("https://your-website-url.com")
+        # Add your test assertions here
+        
+    @classmethod
+    def teardown_class(cls):
+        cls.driver.quit()
+</pre>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <div class="platform">
+        <h3>Common Issues</h3>
+        <h4>1. WebDriver Manager fails to download driver</h4>
+        <p><strong>Solution:</strong> Check your internet connection and firewall settings. You can also download the appropriate driver manually from <a href="https://chromedriver.chromium.org/downloads" target="_blank">chromedriver.chromium.org</a> and specify its path in your code.</p>
+        
+        <h4>2. Browser opens but test fails to interact with elements</h4>
+        <p><strong>Solution:</strong> Use explicit waits to ensure elements are fully loaded before interacting with them:</p>
+        <pre>
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+element = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "element-id"))
+)
+element.click()
+</pre>
+        
+        <h4>3. Tests work locally but fail in CI/CD pipeline</h4>
+        <p><strong>Solution:</strong> Use headless mode for CI/CD environments:</p>
+        <pre>
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+
+driver = webdriver.Chrome(service=service, options=options)
+</pre>
+    </div>
+
+    <script>
+        function openPlatform(evt, platformName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(platformName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

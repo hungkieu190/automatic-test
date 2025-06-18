@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Báo cáo kiểm thử Cookie Consent Plugin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Báo cáo kiểm thử Cookie Consent Plugin</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-06-18 15:54:26</p>
+                <p class='attribute'><strong>Duration: </strong>69.06 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 8, Pass: 2, Fail: 6</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_display.TestCookieConsentDisplay</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_1_1_banner_first_visit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_1_2_banner_mobile_display</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>đã mở trang web thành công
+</p><p style="color:maroon;">AssertionError: Cookie banner không hiển thị đúng trên thiết bị di động: Message: 
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_display.py", line 79, in test_1_2_banner_mobile_display
+    cookie_banner = WebDriverWait(self.driver, 10).until(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_display.py", line 121, in test_1_2_banner_mobile_display
+    self.fail(f"Cookie banner không hiển thị đúng trên thiết bị di động: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Cookie banner không hiển thị đúng trên thiết bị di động: Message: 
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_1_3_banner_return_visit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_1_4_banner_with_cache</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: False is not true : JavaScript của plugin không tải với cache</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_display.py", line 181, in test_1_4_banner_with_cache
+    self.assertTrue(js_loaded, "JavaScript của plugin không tải với cache")
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true : JavaScript của plugin không tải với cache
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 4, Pass: 2, Fail: 2 -- Duration: 39.82 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_consent_functionality.TestCookieConsentFunctionality</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_1_accept_all_cookies</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra nút chấp nhận tất cả: Message: 
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 58, in test_2_1_accept_all_cookies
+    WebDriverWait(self.driver, 10).until(
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 83, in test_2_1_accept_all_cookies
+    self.fail(f"Lỗi khi kiểm tra nút chấp nhận tất cả: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra nút chấp nhận tất cả: Message: 
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_2_reject_all_cookies</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra nút từ chối tất cả: Message: 
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 98, in test_2_2_reject_all_cookies
+    WebDriverWait(self.driver, 10).until(
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 123, in test_2_2_reject_all_cookies
+    self.fail(f"Lỗi khi kiểm tra nút từ chối tất cả: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra nút từ chối tất cả: Message: 
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_3_customize_cookie_settings</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: 'analytics' unexpectedly found in '%7B%22necessary%22%3A%22yes%22%2C%22analytics%22%3A%22no%22%2C%22ads%22%3A%22yes%22%2C%22functional%22%3A%22yes%22%7D' : Cookie phân tích vẫn được chấp nhận dù đã tắt</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 168, in test_2_3_customize_cookie_settings
+    self.assertNotIn("analytics", cookie_value, "Cookie phân tích vẫn được chấp nhận dù đã tắt")
+  File "/usr/lib/python3.12/unittest/case.py", line 1159, in assertNotIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: 'analytics' unexpectedly found in '%7B%22necessary%22%3A%22yes%22%2C%22analytics%22%3A%22no%22%2C%22ads%22%3A%22yes%22%2C%22functional%22%3A%22yes%22%7D' : Cookie phân tích vẫn được chấp nhận dù đã tắt
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_2_4_invalid_request_handling</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Lỗi khi kiểm tra xử lý yêu cầu không hợp lệ: Message: javascript error: ajaxurl is not defined
+  (Session info: chrome=137.0.7151.103)
+Stacktrace:
+#0 0x62f3f373045a <unknown>
+#1 0x62f3f31d5760 <unknown>
+#2 0x62f3f31dc3f8 <unknown>
+#3 0x62f3f31def67 <unknown>
+#4 0x62f3f32742f2 <unknown>
+#5 0x62f3f324ce52 <unknown>
+#6 0x62f3f327330b <unknown>
+#7 0x62f3f324cc23 <unknown>
+#8 0x62f3f32194a5 <unknown>
+#9 0x62f3f321a111 <unknown>
+#10 0x62f3f36f4f1b <unknown>
+#11 0x62f3f36f8e19 <unknown>
+#12 0x62f3f36dbac9 <unknown>
+#13 0x62f3f36f99c8 <unknown>
+#14 0x62f3f36c034f <unknown>
+#15 0x62f3f371da28 <unknown>
+#16 0x62f3f371dc06 <unknown>
+#17 0x62f3f372f336 <unknown>
+#18 0x7592bf29caa4 <unknown>
+#19 0x7592bf329c3c <unknown>
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 197, in test_2_4_invalid_request_handling
+    invalid_request_result = self.driver.execute_script("""
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ecommercelife/devland/automatic-test/thimpress/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 544, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.JavascriptException: Message: javascript error: ajaxurl is not defined
+  (Session info: chrome=137.0.7151.103)
+Stacktrace:
+#0 0x62f3f373045a <unknown>
+#1 0x62f3f31d5760 <unknown>
+#2 0x62f3f31dc3f8 <unknown>
+#3 0x62f3f31def67 <unknown>
+#4 0x62f3f32742f2 <unknown>
+#5 0x62f3f324ce52 <unknown>
+#6 0x62f3f327330b <unknown>
+#7 0x62f3f324cc23 <unknown>
+#8 0x62f3f32194a5 <unknown>
+#9 0x62f3f321a111 <unknown>
+#10 0x62f3f36f4f1b <unknown>
+#11 0x62f3f36f8e19 <unknown>
+#12 0x62f3f36dbac9 <unknown>
+#13 0x62f3f36f99c8 <unknown>
+#14 0x62f3f36c034f <unknown>
+#15 0x62f3f371da28 <unknown>
+#16 0x62f3f371dc06 <unknown>
+#17 0x62f3f372f336 <unknown>
+#18 0x7592bf29caa4 <unknown>
+#19 0x7592bf329c3c <unknown>
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ecommercelife/devland/automatic-test/thimpress/phys-cookie-consent/test_consent_functionality.py", line 218, in test_2_4_invalid_request_handling
+    self.fail(f"Lỗi khi kiểm tra xử lý yêu cầu không hợp lệ: {str(e)}")
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: Lỗi khi kiểm tra xử lý yêu cầu không hợp lệ: Message: javascript error: ajaxurl is not defined
+  (Session info: chrome=137.0.7151.103)
+Stacktrace:
+#0 0x62f3f373045a <unknown>
+#1 0x62f3f31d5760 <unknown>
+#2 0x62f3f31dc3f8 <unknown>
+#3 0x62f3f31def67 <unknown>
+#4 0x62f3f32742f2 <unknown>
+#5 0x62f3f324ce52 <unknown>
+#6 0x62f3f327330b <unknown>
+#7 0x62f3f324cc23 <unknown>
+#8 0x62f3f32194a5 <unknown>
+#9 0x62f3f321a111 <unknown>
+#10 0x62f3f36f4f1b <unknown>
+#11 0x62f3f36f8e19 <unknown>
+#12 0x62f3f36dbac9 <unknown>
+#13 0x62f3f36f99c8 <unknown>
+#14 0x62f3f36c034f <unknown>
+#15 0x62f3f371da28 <unknown>
+#16 0x62f3f371dc06 <unknown>
+#17 0x62f3f372f336 <unknown>
+#18 0x7592bf29caa4 <unknown>
+#19 0x7592bf329c3c <unknown>
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 4, Pass: 0, Fail: 4 -- Duration: 29.25 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
